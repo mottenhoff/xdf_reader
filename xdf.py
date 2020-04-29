@@ -17,6 +17,7 @@ __version__ = '1.14.0'
 
 def read_xdf(path):
     ''' Reads the .xdf file generated '''
+  
     data = load_xdf(path)
     result = {}
     for stream in data[0]:
