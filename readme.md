@@ -7,7 +7,7 @@ Simple adaptation of [pyxdf](https://github.com/xdf-modules/xdf-python/blob/d642
   ```Numpy```
 
 ### Usage:
-Clone repository to folders
+Clone repository to folders \
 ```from read_xdf import read_xdf``` \
 ```results, raw_data = read_xdf(path_to_xdf_file)```
 
