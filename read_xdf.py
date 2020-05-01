@@ -46,8 +46,3 @@ def read_xdf(path):
     return result, data
 
 
-path = r'C:\Users\p70066129\Data\BCI\Grasp\raw/'
-filename = r'grasp_p4_20200221.xdf'
-result, data = read_xdf(path+filename)
-
-print('done')
