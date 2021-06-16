@@ -1,22 +1,9 @@
-from xdf_parser import load_xdf
+import pyxdf
 
 def read_xdf(path):
-    ''' Reads .xdf files
-
-    Input: 
-        path:: string
-            path to .xdf file
-    Output:
-        result:: dict
-            dictionary containing the most relevant information
-        data:: dict
-            dictionary containing all the data directly
-            from xdf_parser
-    '''
-
-    data = load_xdf(path)
+    data, header = pyxdf.load_xdf(path)
     result = {}
-    for stream in data[0]:
+    for stream in data:
         stream_name = stream['info']['name'][0]
         result[stream_name] = {}
 
@@ -45,4 +32,9 @@ def read_xdf(path):
 
     return result, data
 
+path = r'L:\FHML_MHeNs\sEEG\kh22\session_2\exp001\block_words.xdf'
+path = r'L:\FHML_MHeNs\sEEG\kh22\session_1\sentences1.xdf'
+# path = r'C:\Users\p70066129\Desktop\block_words2.xdf'
 
+result, data = read_xdf(path)
+print('done')
