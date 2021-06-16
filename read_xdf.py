@@ -31,10 +31,3 @@ def read_xdf(path):
                     result[stream_name]['manufacturer'] = desc['manufacturer'][0]
 
     return result, data
-
-path = r'L:\FHML_MHeNs\sEEG\kh22\session_2\exp001\block_words.xdf'
-path = r'L:\FHML_MHeNs\sEEG\kh22\session_1\sentences1.xdf'
-# path = r'C:\Users\p70066129\Desktop\block_words2.xdf'
-
-result, data = read_xdf(path)
-print('done')
