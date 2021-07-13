@@ -8,7 +8,7 @@ def read_xdf(path):
         result[stream_name] = {}
 
         # Info
-        result[stream_name]['fs'] = int(stream['info']['nominal_srate'][0])
+        result[stream_name]['fs'] = float(stream['info']['nominal_srate'][0])
         result[stream_name]['type'] = stream['info']['type'][0].lower()
         result[stream_name]['first_ts'] = float(stream['footer']['info']['first_timestamp'][0])
         result[stream_name]['last_ts'] = float(stream['footer']['info']['last_timestamp'][0])
